@@ -34,8 +34,16 @@ public class Department{
         employees.put(employee.getSocialSecurityNumber(),employee);
     }
 
+    public Employee getSeparateEmployee (String socialSecurityNumber){
+        return employees.get(socialSecurityNumber);
+    }
+
     public Map<String,Patient> getPatients(){
         return patients;
+    }
+
+    public Patient getSeparatePatient (String socialSecurityNumber){
+        return patients.get(socialSecurityNumber);
     }
 
     public void addPatients(Patient patient){
