@@ -1,5 +1,6 @@
 package mappe.del1.hospital;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Hospital {
@@ -8,6 +9,7 @@ public class Hospital {
 
     public Hospital(String hospitalName) {
         this.hospitalName = hospitalName;
+        departments = new HashMap<>();
     }
 
     public String getHospitalName() {
@@ -23,6 +25,10 @@ public class Hospital {
             return;
         }
         departments.put(department.getDepartmentName(),department);
+    }
+
+    public Department getSeparateDepartment(String departmentName){
+        return departments.get(departmentName);
     }
 
     @Override
