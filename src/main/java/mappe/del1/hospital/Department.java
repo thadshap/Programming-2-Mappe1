@@ -1,17 +1,18 @@
 package mappe.del1.hospital;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import mappe.del1.hospital.exception.RemoveException;
 
-public class Department {
+import java.util.*;
+
+public class Department{
     private  String departmentName;
     private Map<String,Employee> employees;
     private Map<String,Patient> patients;
 
     public Department(String departmentName) {
         setDepartmentName(departmentName);
+        employees = new HashMap<>();
+        patients = new HashMap<>();
     }
 
     public void setDepartmentName(String departmentName) {
@@ -44,19 +45,35 @@ public class Department {
         patients.put(patient.getSocialSecurityNumber(),patient);
     }
 
-    public void remove(Person person){
+    public void remove(Person person) throws RemoveException{
+
         if (person instanceof Employee){
-            employees.remove(person.getSocialSecurityNumber());
+            if (employees.containsKey(person.getSocialSecurityNumber())) {
+                employees.remove(person.getSocialSecurityNumber());
+            }
+            else {
+                throw new RemoveException("The person you entered is not an employee.");
+            }
         }
         else if(person instanceof Patient){
-            patients.remove(person.getSocialSecurityNumber());
+            if (patients.containsKey(person.getSocialSecurityNumber())) {
+                patients.remove(person.getSocialSecurityNumber());
+            }
+            else {
+                throw new RemoveException("The person you entered is not a patient.");
+            }
+        }
+        else {
+            throw new RemoveException("The person you entered is neither a patient nor an employee.");
         }
     }
 
-    //@Override
-    public boolean equals(Department o) {
+    @Override
+    public boolean equals(Object o) {
         if (this == o) return true;
-        return getDepartmentName().equals(o.getDepartmentName());
+        if (!(o instanceof Department)) return false;
+        Department that = (Department) o;
+        return getDepartmentName().equals(that.getDepartmentName());
     }
 
     @Override
