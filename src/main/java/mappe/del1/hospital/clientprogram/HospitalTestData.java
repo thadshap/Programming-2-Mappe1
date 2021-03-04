@@ -1,3 +1,5 @@
+package mappe.del1.hospital.clientprogram;
+
 import mappe.del1.hospital.Department;
 import mappe.del1.hospital.Employee;
 import mappe.del1.hospital.Hospital;
