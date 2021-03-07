@@ -69,24 +69,6 @@ public class Department{
     }
 
     /**
-     * get a specific employee by social security number (access method)
-     * @param socialSecurityNumber (String)
-     * @return employee (Employee)
-     */
-    public Employee getSeparateEmployee (String socialSecurityNumber){
-        return employees.get(socialSecurityNumber);
-    }
-
-    /**
-     * get a specific patient by social security number (access method)
-     * @param socialSecurityNumber (String)
-     * @return patient (Patient)
-     */
-    public Patient getSeparatePatient (String socialSecurityNumber){
-        return patients.get(socialSecurityNumber);
-    }
-
-    /**
      * add new employees with employee object which contains employee's first name, last name and
      * social security number. You can not add a employee that already exists.
      *
