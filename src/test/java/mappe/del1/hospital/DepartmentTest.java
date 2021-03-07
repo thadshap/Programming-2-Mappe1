@@ -1,5 +1,12 @@
 package mappe.del1.hospital;
 
+/**
+ * DepartmentTest is a test program that tests the remove methode from department class.
+ *
+ * @version 11.03.2021
+ * @author Thadshajini
+ */
+
 import mappe.del1.hospital.exception.RemoveException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
