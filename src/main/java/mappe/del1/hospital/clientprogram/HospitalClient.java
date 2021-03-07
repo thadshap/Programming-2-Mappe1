@@ -18,21 +18,21 @@ public class HospitalClient {
     public static void main(String[] args) {
         Hospital hospital = new Hospital("Ullevål");
         HospitalTestData.fillRegisterWithTestData(hospital);
-        Department department = hospital.getSeparateDepartment("Akutten");
-        Employee employee = department.getSeparateEmployee("1");
+        Department department1 = hospital.getDepartments().get("Akutten");
+        Employee employee1 = department1.getEmployees().get("1");
         try {
-            department.remove(employee);
+            department1.remove(employee1);
         }
         catch (RemoveException r){
             System.out.println(r.getMessage());
         }
-        if (department.getSeparateEmployee("1")==null){
+        if (department1.getEmployees().get("1")==null){
             System.out.println("The employee was successfully fired.");
         }
 
         Patient patient = new Patient("Kare","Los","20");
         try {
-            department.remove(patient);
+            department1.remove(patient);
         }
         catch (RemoveException r){
             System.out.println(r.getMessage());
