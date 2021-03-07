@@ -1,5 +1,13 @@
 package mappe.del1.hospital.clientprogram;
 
+/**
+ * HospitalClient is a simple client class that uses HospitalTestData.fillRegisterWithTestDate
+ * to fill the registers with data to test the application.
+ *
+ * @version 11.03.2021
+ * @author Thadshajini
+ */
+
 import mappe.del1.hospital.Department;
 import mappe.del1.hospital.Employee;
 import mappe.del1.hospital.Hospital;
