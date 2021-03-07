@@ -1,5 +1,12 @@
 package mappe.del1.hospital.clientprogram;
 
+/**
+ * HospitalClient is a simple client class to test the application.
+ *
+ * @version 11.03.2021
+ * @author Thadshajini
+ */
+
 import mappe.del1.hospital.Department;
 import mappe.del1.hospital.Employee;
 import mappe.del1.hospital.Hospital;
@@ -13,8 +20,8 @@ public final class HospitalTestData {
         // not called
     }
     /**
-     *
-     * @param hospital
+     * Fills different departments with employees and patients in a hospital
+     * @param hospital is final and have hospital as it's data type which means that it takes inn hospital name
      */
     public static void fillRegisterWithTestData(final Hospital hospital) {
         // Add some departments
