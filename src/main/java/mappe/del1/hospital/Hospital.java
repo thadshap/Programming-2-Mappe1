@@ -61,15 +61,6 @@ public class Hospital {
     }
 
     /**
-     * (access methode)
-     * @param departmentName (string)
-     * @return department name (Department)
-     */
-    public Department getSeparateDepartment(String departmentName){
-        return departments.get(departmentName);
-    }
-
-    /**
      * toString methode
      * @return Hospital{hospitalName='hospitalName'
                         departments=departments
