@@ -75,7 +75,7 @@ public class Department{
      * @param employee (Employee)
      */
     public void addEmployee(Employee employee){
-        if (employees.containsValue(employee)){
+        if (employees.containsKey(employee)){
             return;
         }
         employees.put(employee.getSocialSecurityNumber(),employee);
@@ -88,7 +88,7 @@ public class Department{
      * @param patient (Patient)
      */
     public void addPatients(Patient patient){
-        if (patients.containsValue(patient)){
+        if (patients.containsKey(patient)){
             return;
         }
         patients.put(patient.getSocialSecurityNumber(),patient);

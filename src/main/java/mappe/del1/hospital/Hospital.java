@@ -54,7 +54,7 @@ public class Hospital {
      * @param department (Department)
      */
     public void addDepartments(Department department){
-        if (departments.containsValue(department)){
+        if (departments.containsKey(department)){
             return;
         }
         departments.put(department.getDepartmentName(),department);
